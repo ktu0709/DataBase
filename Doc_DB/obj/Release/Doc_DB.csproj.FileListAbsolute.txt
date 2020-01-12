@@ -1,0 +1,7 @@
+C:\Users\PC_onion\Desktop\Doc_DB\Doc_DB\obj\Release\Doc_DB.csprojAssemblyReference.cache
+C:\Users\PC_onion\Desktop\Doc_DB\Doc_DB\obj\Release\Doc_DB.Form1.resources
+C:\Users\PC_onion\Desktop\Doc_DB\Doc_DB\obj\Release\Doc_DB.Form2.resources
+C:\Users\PC_onion\Desktop\Doc_DB\Doc_DB\obj\Release\Doc_DB.Form3.resources
+C:\Users\PC_onion\Desktop\Doc_DB\Doc_DB\obj\Release\Doc_DB.Form4.resources
+C:\Users\PC_onion\Desktop\Doc_DB\Doc_DB\obj\Release\Doc_DB.Properties.Resources.resources
+C:\Users\PC_onion\Desktop\Doc_DB\Doc_DB\obj\Release\Doc_DB.csproj.GenerateResource.cache
