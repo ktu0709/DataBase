@@ -74,11 +74,7 @@ namespace Doc_DB
                 closeConnection();
             }
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-              //dummy Event
-        }
-
+       
         private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
         {
             textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
