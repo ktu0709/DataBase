@@ -70,11 +70,6 @@ namespace Doc_DB
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            //무시
-        }
-
         private void Form4_Load(object sender, EventArgs e)
         {
             populateDIA();
