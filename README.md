@@ -8,3 +8,6 @@ insert 실행
 <br>
 ![update_motion](https://user-images.githubusercontent.com/44633204/93844836-82c0d600-fcd9-11ea-859b-1f07e811acc6.gif)
 update 실행
+<br>
+![delete_motion](https://user-images.githubusercontent.com/44633204/93844938-e8ad5d80-fcd9-11ea-9ef9-108d1d684718.gif)
+Delete 실행
