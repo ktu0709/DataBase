@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +21,7 @@ namespace Doc_DB
         }
         public void populatePAT()
         {
-            string selectQuery = "SELECT * FROM patient";
+            string selectQuery = "SELECT pat_id as 환자ID , pat_addr as 주소 ,pat_name as 환자이름,pat_gen as 성별,pat_phone as 전화번호 ,pat_email as 이메일 , major_treat as 진료과,doc_name as 담당의사,nur_name as 담당간호사  FROM hospital.patient";
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
             adapter.Fill(table);
