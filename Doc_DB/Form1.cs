@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +21,7 @@ namespace Doc_DB
         }
         public void populateDOC()
         {
-            string selectQuery = "SELECT * FROM doctor";
+            string selectQuery = "SELECT doc_id as ID , major_treat as 전공 ,doc_name as 이름 , doc_gen as 성별 , doc_phone as 전화번호 , doc_email as 이메일 FROM doctor";
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
             adapter.Fill(table);
@@ -74,7 +74,11 @@ namespace Doc_DB
                 closeConnection();
             }
         }
-       
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+              //dummy Event
+        }
+
         private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
         {
             textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
