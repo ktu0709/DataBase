@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +21,7 @@ namespace Doc_DB
         }
         public void populateNUR()
         {
-            string selectQuery = "SELECT * FROM nurse";
+            string selectQuery = "SELECT nur_id as 간호사ID, major_job as 담당과,nur_name as 이름,nur_gen as 성별,nur_phone as 전화번호,nur_email as 이메일 FROM hospital.nurse;";
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
             adapter.Fill(table);
@@ -82,19 +82,18 @@ namespace Doc_DB
             textBox4.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             textBox5.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             textBox6.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            textBox7.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e) //INSERT
         {
-            string insertQuery = "INSERT INTO nurse(major_job,nur_name,nur_gen,nur_phone,nur_email,doc_id) VALUES('" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "')";
+            string insertQuery = "INSERT INTO nurse(major_job,nur_name,nur_gen,nur_phone,nur_email) VALUES('" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "')";
             executeMyQuery(insertQuery);
             populateNUR();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string updateQuery = "UPDATE nurse SET major_job='" + textBox2.Text + "',nur_name='" + textBox3.Text + "',nur_gen='" + textBox4.Text + "',nur_phone='" + textBox5.Text + "',nur_email='" + textBox6.Text + "',doc_id='" + textBox7.Text + "' WHERE nur_id =" + int.Parse(textBox1.Text);
+            string updateQuery = "UPDATE nurse SET major_job='" + textBox2.Text + "',nur_name='" + textBox3.Text + "',nur_gen='" + textBox4.Text + "',nur_phone='" + textBox5.Text + "',nur_email='" + textBox6.Text + "' WHERE nur_id =" + int.Parse(textBox1.Text);
             executeMyQuery(updateQuery);
             populateNUR();
         }
