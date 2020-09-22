@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +21,7 @@ namespace Doc_DB
         }
         public void populateDIA()
         {
-            string selectQuery = "SELECT * FROM diagnosis";
+            string selectQuery = "SELECT treat_id as 진료ID,doc_name as 담당의사,pat_name as 환자이름 ,treat_contents as 진료내용, treat_date as 진료날짜 FROM diagnosis";
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
             adapter.Fill(table);
@@ -68,6 +68,11 @@ namespace Doc_DB
             {
                 closeConnection();
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            //무시
         }
 
         private void Form4_Load(object sender, EventArgs e)
